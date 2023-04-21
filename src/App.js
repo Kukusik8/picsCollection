@@ -1,6 +1,6 @@
 import React from 'react';
 import './index.scss';
-import { Collection } from './Collection';
+import { Collection } from './collection';
 
 const cats = [
   { "name": "Все" },
