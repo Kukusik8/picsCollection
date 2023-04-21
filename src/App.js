@@ -36,7 +36,7 @@ function App() {
 
  return (
     <div className="App">
-      <h1>Моя коллекция фотографий</h1>
+      <h1>Фотоколлекция</h1>
       <div className="top">
         <ul className="tags">
           {
