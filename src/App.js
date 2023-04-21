@@ -3,11 +3,11 @@ import './index.scss';
 import { Collection } from './collection';
 
 const cats = [
-  { "name": "Все" },
-  { "name": "Море" },
-  { "name": "Горы" },
-  { "name": "Архитектура" },
-  { "name": "Города" }
+  { "name": "All" },
+  { "name": "Sea" },
+  { "name": "Mountains" },
+  { "name": "Architecture" },
+  { "name": "Cities" }
 ]
 function App() {
   const [categoryId,setCategoryId] = React.useState(0)
@@ -30,13 +30,13 @@ function App() {
     })
     .catch((err) => {
       console.warn(err);
-      alert('отстой');
+      alert(`could't get data from server`);
     }).finally(()=>setIsLoading(false));
     }, [categoryId,page]);
 
  return (
     <div className="App">
-      <h1>Фотоколлекция</h1>
+      <h1>Photo collection</h1>
       <div className="top">
         <ul className="tags">
           {
@@ -44,11 +44,11 @@ function App() {
             <li onClick={() => setCategoryId(i)}  className={categoryId === i ? 'active':''} key={obj.name}>{obj.name}</li>
            ))}
         </ul>
-        <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} className="search-input" placeholder="Поиск по названию" />
+        <input value={searchValue} onChange={(e) => setSearchValue(e.target.value)} className="search-input" placeholder="search by title" />
       </div>
       <div className="content">
           {isLoading ? ( 
-             <h2>Идет загрузка...</h2>
+             <h2>is loading...</h2>
           ) : (
           collections
           .filter(obj => obj.name.toLowerCase().includes(searchValue.toLowerCase())) 
@@ -62,7 +62,7 @@ function App() {
         
       </div>
       <ul className="pagination">
-        {[...Array(5)].map((_,i) => ( 
+        {[...Array(3)].map((_,i) => ( 
           <li onClick={() => setPage(i+1)} className={page === i+1 ? 'active' : ''} >{i+1}</li>
         ))}
       </ul>

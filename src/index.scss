@@ -6,7 +6,7 @@ body {
     Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #eff0f1;
+  background-color: #699299;
   
 }
 
@@ -22,6 +22,7 @@ body {
 
 h1 {
   font-family: 'Merriweather', serif;
+  color: #fae7e7;
 }
 
 .tags {
@@ -31,7 +32,7 @@ h1 {
   li {
     display: inline-block;
     padding: 12px 18px;
-    background-color: #fff;
+    background-color: #eee9e9;;
     border-radius: 10px;
     margin-right: 10px;
     cursor: pointer;
@@ -39,14 +40,16 @@ h1 {
     font-size: 18px;
     border: 1px solid transparent;
     transition: all 0.15s ease-in-out;
+    color: rgb(70, 65, 65);
 
     &:hover {
-      border-color: #000;
+      border: 1px dashed #000;
+      
     }
 
     &.active {
-      background-color: #000;
-      color: #fff;
+      background-color: #302d2d;
+      color: #7486c4;
     }
   }
 }
@@ -69,10 +72,10 @@ h1 {
 
 .collection {
   max-width: 470px;
-  background-color: #fff;
+  background-color: #dad5d5;
   padding: 30px;
   border-radius: 30px;
-  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.05);
+  box-shadow: 0 3px 0 rgba(180, 28, 28, 0.05);
   cursor: pointer;
   transition: all 0.15s ease-in-out;
 
@@ -84,7 +87,7 @@ h1 {
   }
 
   &:hover {
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 20px 30px rgba(139, 43, 43, 0.1);
     transform: translateY(-5px);
   }
 
@@ -127,12 +130,12 @@ h1 {
   height: 50px;
   padding: 0 15px;
   border-radius: 10px;
-  border: 1px solid rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(30, 255, 0, 0.2);
   outline: none;
   transition: all 0.15s ease-in-out;
 
   &:focus {
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    border: 2px dashed rgb(105, 101, 101);
   }
 }
 
@@ -153,7 +156,7 @@ h1 {
     cursor: pointer;
 
     &.active {
-      background-color: black;
+      background-color: #302d2d;
       color: #fff;
     }
   }
